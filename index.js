@@ -24,13 +24,6 @@ if (args._.length < 3) {
 
 const file = args._[args._.length - 1];
 
-let colors;
-if (args.colors === true) {
-  colors = ['^r', '^y'];
-} else if (args.colors) {
-  colors = args.colors.split(',');
-}
-
 let marker = args.marker;
 if (!marker && process.platform === 'win32') {
   // Windows CMD and PowerShell dosn't support ANSI Inverse.
@@ -39,7 +32,7 @@ if (!marker && process.platform === 'win32') {
 const progArgs = {
   status: args.status,
   keys: args.keys,
-  colors: colors,
+  colors: args.colors,
   selectMarker: marker || '^!',
   alternateScreen: args['alternate-screen'],
   file: new FileHandle(file),

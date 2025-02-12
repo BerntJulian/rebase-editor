@@ -1,0 +1,12 @@
+{
+  "drop": "^r",
+  "pick": "^g",
+  "reword": "^Y",
+  "edit": "^b",
+  "squash": "^M",
+  "fixup": "^C",
+  "break": "^R",
+  "hash": "^R",
+  "comment": "^K",
+  "message" : "^c"
+}
